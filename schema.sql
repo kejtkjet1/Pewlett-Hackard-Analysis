@@ -25,6 +25,7 @@ FOREIGN KEY (dept_no) REFERENCES departments (dept_no),
     PRIMARY KEY (emp_no, dept_no)
 );
 
+
 CREATE TABLE salaries (
   emp_no INT NOT NULL,
   salary INT NOT NULL,
@@ -35,8 +36,8 @@ CREATE TABLE salaries (
 );
 
 CREATE TABLE dept_employees (
-dept_no VARCHAR(4) NOT NULL,
-    emp_no INT NOT NULL,
+    emp_no int NOT NULL,
+	dept_no VARCHAR(6) NOT NULL,
     from_date DATE NOT NULL,
     to_date DATE NOT NULL,
 FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
@@ -44,11 +45,17 @@ FOREIGN KEY (dept_no) REFERENCES departments (dept_no),
     PRIMARY KEY (emp_no, dept_no)
 );
 
-CREATE TABLE tittles (
+select * from dept_employees
+
+
+CREATE TABLE titles (
     emp_no INT NOT NULL,
+	title varchar NOT NULL,
     from_date DATE NOT NULL,
     to_date DATE NOT NULL,
-	title varchar NOT NULL,
+
 FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
-PRIMARY KEY (from_date, title)
+PRIMARY KEY (from_date, emp_no)
 );
+
+SELECT * FROM titles;
