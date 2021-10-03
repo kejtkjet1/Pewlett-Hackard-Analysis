@@ -10,7 +10,7 @@ Analysis of the employer base of Pewlett-Hackard to evaluate how many of the cur
 ## Analysis
 
 - HP is expecting a loss of over 90K employees to the upcoming "silver tsunami"
-- Majority of those close to retiring are in Senior Staff positions and in Engineering roles, please see the table belwo 
+- Majority of those close to retiring are in Senior Staff positions and in Engineering roles, please see the table below: 
 
 
 ![retiringtitle.png](https://github.com/kejtkjet1/Pewlett-Hackard-Analysis/blob/main/Analysis%20Projects%20Folder/Resources/retiringtitle.png)
