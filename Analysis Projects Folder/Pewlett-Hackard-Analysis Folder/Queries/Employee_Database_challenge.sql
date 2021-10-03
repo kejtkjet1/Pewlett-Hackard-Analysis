@@ -114,17 +114,15 @@ Create a new table using the INTO clause.
 --Join the Employees and the Titles tables on the primary key.
 --Filter the data on the to_date column to all the current employees, 
 --then filter the data on the birth_date columns to get all the employees
- whose birth dates are between January 1, 1965 and December 31, 1965.
+--whose birth dates are between January 1, 1965 and December 31, 1965.
 --Order the table by the employee number
-Export the Mentorship Eligibility table as mentorship_eligibilty.csv and save it to your Data folder in the Pewlett-Hackard-Analysis folder.
-Before you export your table, confirm that it looks like this image:
 
 
 
-SELECT e.emp_no, e.first_name, e.birth_date,
+SELECT DISTINCT ON (e.emp_no) e.emp_no, e.first_name, e.birth_date,
     d.from_date, d.to_date
-    t.title
-INTO entorship_eligibilty
+    title
+INTO mentorship_eligibilty
 FROM employees as e
 INNER JOIN dept_employees as d
 ON (e.emp_no = d.emp_no)
@@ -134,3 +132,8 @@ WHERE (d.to_date = '9999-01-01')
      AND 
      (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 ORDER BY emp_no;
+
+SELECT * from mentorship_eligibilty
+
+
+--Export the Mentorship Eligibility table as mentorship_eligibilty.csv and save it to your Data folder in the Pewlett-Hackard-Analysis folder.
