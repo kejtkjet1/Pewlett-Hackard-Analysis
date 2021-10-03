@@ -5,7 +5,7 @@ SQL Project
 
 ### Purpose
 
-Analisis of the employer base of Pewlett-Hackard to evaluate how many of the current emplyees will retire in the near future, and to set up a mentorship program for the next generation of employees.
+Analysis of the employer base of Pewlett-Hackard to evaluate how many of the current emplyees will retire in the near future, and to set up a mentorship program for the next generation of employees.
 
 ## Analysis
 
